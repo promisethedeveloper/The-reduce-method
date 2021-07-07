@@ -19,3 +19,14 @@ for(let i = 0; i < movements.length; i++) {
   sum2 += movements[i];
 }
 console.log(sum2);
+
+// Using the reduce method to get the element with the maximum value in an array
+const answer = movements.reduce(function(acc, curValue) {
+  if (acc > curValue) {
+    return acc;
+  } else {
+    return curValue;
+  }
+}, movements[0]);
+
+console.log(answer);
